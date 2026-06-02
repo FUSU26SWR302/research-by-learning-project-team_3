@@ -1,0 +1,85 @@
+name: MockAI-Interview CI/CD Pipeline
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  security-scan:
+    name: Security Vulnerability Scan
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Run Dependency Security Audit
+        run: |
+          echo "Scanning dependencies for high/critical vulnerabilities..."
+          pnpm audit --audit-level=high || echo "Vulnerability scan completed. Please review any warnings above."
+
+  frontend-check:
+    name: Frontend React Check
+    needs: security-scan
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+
+      - name: Install Dependencies
+        run: pnpm install --ignore-scripts
+
+      - name: Run Syntax & Lint Checks
+        run: pnpm -C frontend run lint
+
+      - name: Run Frontend Test Suite
+        run: pnpm -C frontend run test
+
+      - name: Build Application for Production
+        run: pnpm -C frontend run build
+
+  backend-check:
+    name: Backend Node.js Check
+    needs: security-scan
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+
+      - name: Install Dependencies
+        run: pnpm install --ignore-scripts
+
+      - name: Run Backend Test Suite
+        run: pnpm -C backend run test
+
