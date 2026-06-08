@@ -50,10 +50,13 @@ Dự án này không chỉ dừng lại ở các thao tác CRUD cơ bản mà đ
 - **Micro-interaction & Modular Design**: Hệ thống chia nhỏ thành các module độc lập (CV Module, Interview Module, Assessment Module) giúp dễ dàng scale và maintain theo chuẩn Software Factory.
 - **Realtime Infrastructure**: Thiết kế kiến trúc Event-driven qua WebSockets để xử lý song song các tác vụ nặng (như generate AI response) mà không chặn luồng chính (Main thread) của ứng dụng.
 
-### 4. Quản lý dự án (Jira)
+### 4. SRS
+- **Link docs SRS**: [SRS.docx](https://docs.google.com/document/d/1b_qPliaXtNWVewIQukcFWwAx7cJP0J1vXuqmsR8QAVc/edit?usp=sharing)
+
+### 5. Quản lý dự án (Jira)
 
 - **Phân công thành viên**:
 - **Link Jira**: [Group6 Team Jira](https://nhaphuong220905.atlassian.net/?continue=https%3A%2F%2Fnhaphuong220905.atlassian.net%2Fwelcome%2Fsoftware%3FprojectId%3D10002&atlOrigin=eyJpIjoiZTRiZmMwZjQyYTgwNDZlNGIyOWUzZDg2MTVjOTYyYzMiLCJwIjoiamlyYS1zb2Zmd2FyZSJ9)
-### 5. Paper(Overleaf).
+### 6. Paper(Overleaf).
 **Link paper**: https://www.overleaf.com/read/ndjkhrmtrtjv#fafabd
 
