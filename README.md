@@ -12,7 +12,7 @@ Nền tảng hỗ trợ việc làm toàn diện tích hợp Trí tuệ Nhân t�
 |  2  | Nguyễn Tam Quân     |
 |  3  | Trần Nguyễn Gia Huy |
 |  4  | Nguyễn Đông Triều   |
-|  5  | Phạm Quang Sáng     |
+|  5  | Phạm Văn Sáng     |
 
 ---
 
@@ -54,3 +54,6 @@ Dự án này không chỉ dừng lại ở các thao tác CRUD cơ bản mà đ
 
 - **Phân công thành viên**:
 - **Link Jira**: [Group6 Team Jira](https://nhaphuong220905.atlassian.net/?continue=https%3A%2F%2Fnhaphuong220905.atlassian.net%2Fwelcome%2Fsoftware%3FprojectId%3D10002&atlOrigin=eyJpIjoiZTRiZmMwZjQyYTgwNDZlNGIyOWUzZDg2MTVjOTYyYzMiLCJwIjoiamlyYS1zb2Zmd2FyZSJ9)
+### 5. Paper(Overleaf).
+**Link paper**: https://www.overleaf.com/read/ndjkhrmtrtjv#fafabd
+
